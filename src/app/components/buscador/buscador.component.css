@@ -1,0 +1,17 @@
+.pagoimg {
+    border-radius: 120%;
+    border: 4px solid hsl(300, 64%, 20%);
+    width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.letra {
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+}
+
+.titulo {
+    color: #531253;
+}

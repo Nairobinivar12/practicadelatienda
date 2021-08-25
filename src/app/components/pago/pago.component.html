@@ -1,0 +1,119 @@
+<h1 class="letra mt-2 text-center">Procesar pago</h1>
+<div class="justify-content-center d-flex">
+
+    <form (ngSubmit)="guardar(forma)" #forma="ngForm" novalidate="" class="text-center color">
+
+        <img src="assets/img/products/dplnews_efectivo_jb190419.jpg" class="pagoimg mt-4">
+        <!--Nombre-->
+        <div class="form-group row m-5 ">
+            <label class="col-2 col-form-label"> </label>
+            <div class="col-8">
+                <input class="form-control" type="text" placeholder="Nombre" minlength=3 required name="nombre" [ngClass]="{'border border-danger':nombre.errors?.required && nombre.invalid && forma.submitted,'border border-info':nombre.errors?.minlength}" [ngModel]="usuario.nombre"
+                    #nombre="ngModel">
+                <div *ngIf="nombre.errors?.required && forma.submitted">
+                    <p class="text-danger"> Este campo es Requerido.</p>
+                </div>
+                <div *ngIf="nombre.errors?.minlength">
+                    <p class="text-info">Se necesitan 3 caracteres por lo menos.</p>
+                </div>
+            </div>
+        </div>
+        <!--Apellido-->
+        <div class="form-group row m-5 ">
+            <label class="col-2 col-form-label"></label>
+            <div class="col-8">
+                <input class="form-control" type="text" placeholder="Apellido" minlength=3 required name="apellido" [ngClass]="{'border border-danger':apellido.errors?.required && apellido.invalid && forma.submitted,'border border-info':apellido.errors?.minlength}" [ngModel]="usuario.apellido"
+                    #apellido="ngModel">
+                <div *ngIf="apellido.errors?.required && forma.submitted">
+                    <p class="text-danger"> Este campo es Requerido.</p>
+                </div>
+                <div *ngIf="apellido.errors?.minlength">
+                    <p class="text-info">Se necesitan 3 caracteres por lo menos.</p>
+                </div>
+            </div>
+        </div>
+        <!--Correo-->
+        <div class="form-group row m-5 ">
+            <label class="col-2 col-form-label"></label>
+            <div class="col-8">
+                <input class="form-control" type="text" placeholder="Correo" minlength=5 required name="correo" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" [ngClass]="{'border border-danger':correo.errors?.required && correo.invalid && forma.submitted,'border border-info':correo.errors?.minlength}"
+                    [ngModel]="usuario.correo" #correo="ngModel">
+
+                <div *ngIf="correo.errors?.required && forma.submitted">
+                    <p class="text-danger"> Este campo es Requerido.</p>
+                </div>
+                <div *ngIf="correo.errors?.pattern && forma.submitted">
+                    <p class="text-info">Ingrese un correo corecto.</p>
+                </div>
+            </div>
+        </div>
+        <!--cedula-->
+        <div class="form-group row m-5 ">
+            <label class="col-2 col-form-label"></label>
+            <div class="col-8">
+                <input class="form-control" type="text" placeholder="Cedula" minlength=10 required name="cedula" pattern="/^[0-9]$/" [ngClass]="{'border border-danger':cedula.errors?.required && cedula.invalid && forma.submitted,'border border-info':cedula.errors?.minlength}"
+                    [ngModel]="usuario.cedula" #cedula="ngModel">
+
+                <div *ngIf="cedula.errors?.required && forma.submitted">
+                    <p class="text-danger"> Este campo es Requerido.</p>
+                </div>
+                <div *ngIf="cedula.errors?.pattern && forma.submitted">
+                    <p class="text-info">Ingrese un numero de cedula corecta.</p>
+                </div>
+            </div>
+        </div>
+        <!--Tarjeta -->
+        <div class="form-group row m-5 ">
+            <label class="col-2 col-form-label"></label>
+            <div class="col-8">
+                <input class="form-control" type="password" placeholder="tarjeta" minlength=5 required name="tarjeta" pattern="/^[0-9]$/" [ngClass]="{'border border-danger':tarjeta.errors?.required && tarjeta.invalid && forma.submitted,'border border-info':tarjeta.errors?.minlength}"
+                    [ngModel]="usuario.tarjeta" #tarjeta="ngModel">
+
+                <div *ngIf="correo.errors?.required && forma.submitted">
+                    <p class="text-danger"> Este campo es Requerido.</p>
+                </div>
+                <div *ngIf="correo.errors?.pattern && forma.submitted">
+                    <p class="text-info">Ingrese una tarjeta corecta.</p>
+                </div>
+            </div>
+        </div>
+        <!--Fecha vencimiento -->
+        <div class="form-group row m-5 ">
+            <label class="col-2 col-form-label"></label>
+            <div class="col-8">
+                <input class="form-control" type="text" placeholder="fecha de vencimiento" minlength=5 required name="fecha" pattern="/^[0-9]$/" [ngClass]="{'border border-danger':fecha.errors?.required && fecha.invalid && forma.submitted,'border border-info':fecha.errors?.minlength}"
+                    [ngModel]="usuario.fecha" #fecha="ngModel">
+
+                <div *ngIf="fecha.errors?.required && forma.submitted">
+                    <p class="text-danger"> Este campo es Requerido.</p>
+                </div>
+                <div *ngIf="fecha.errors?.pattern && forma.submitted">
+                    <p class="text-info">Ingrese una Fecha corecta.</p>
+                </div>
+            </div>
+        </div>
+        <!--CVV-->
+        <div class="form-group row m-5 ">
+            <label class="col-2 col-form-label"></label>
+            <div class="col-8">
+                <input class="form-control" type="password" placeholder="CVV" minlength=3 required name="cvv" pattern="/^[0-9]$/" [ngClass]="{'border border-danger':cvv.errors?.required && cvv.invalid && forma.submitted,'border border-info':cvv.errors?.minlength}" [ngModel]="usuario.cvv"
+                    #cvv="ngModel">
+
+                <div *ngIf="cvv.errors?.required && forma.submitted">
+                    <p class="text-danger"> Este campo es Requerido.</p>
+                </div>
+                <div *ngIf="cvv.errors?.pattern && forma.submitted">
+                    <p class="text-info">Ingrese un CVV Correcto.</p>
+                </div>
+            </div>
+        </div>
+        <!--Boton-->
+
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary btn-lg bton ">
+                Guardar
+                </button>
+        </div>
+
+    </form>
+</div>

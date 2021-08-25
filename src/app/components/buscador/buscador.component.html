@@ -1,0 +1,22 @@
+<div class="row row-cols-1 row-cols-md-3 g-4 m-4">
+    <div class="col animated faceIn  fast" *ngFor="let ropa of ropas let i = index">
+        <div class="card ">
+            <img [src]="ropa.img " class="card-img-top h-2" [alt]="ropa.nombre">
+            <div class="card-body">
+                <h5 class="card-title text-center letra">{{ropa.nombre}}</h5>
+            </div>
+            <!--<button class=" btn btn-primary"> Comprar</button> -->
+            <a class="btn btn-primary boton letra" [routerLink]="['/carrito',i]">comprar</a>
+        </div>
+    </div>
+
+
+    <div class="col-md-12" *ngIf="ropas.length == 0">
+        <img src="assets/img/icons/lupa.jpg" class="pagoimg">
+        <div class="alert alert-info m-5 text-center letra">
+            No tenemos actualmente este Articulo
+            <!--{{termino}}-->
+
+        </div>
+    </div>
+</div>

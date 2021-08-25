@@ -1,0 +1,29 @@
+<div class="container">
+    <br>
+    <h2 class="text-center titulo letra">Carrito de compra</h2>
+
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <img [src]="ropa.img" class="img-fluid" alt="">
+            <br> <br>
+            <a [routerLink]="['/ropa']" class="btn btn-danger  m-2  letra"> Regresar</a>
+            <a [routerLink]="['/pago']" class="btn btn-success letra "> Procesar Pago</a>
+
+        </div>
+        <div class="col-md-8">
+            <h3 class="text-center letra"> Articulo </h3>
+            <hr>
+            <p class="letra"> ARTICULO: {{ropa.nombre }} </p>
+            <hr>
+            <p class="letra">COLOR: {{ropa.color }}</p>
+            <hr>
+            <p class="letra"> PRECIO: {{ropa.precio }}</p>
+            <hr>
+            <p class="letra"> SIZE: {{ropa.size }}</p>
+            <hr>
+            <p class="letra"> DETALLE: {{ropa.Detalle }}</p>
+            <hr>
+        </div>
+
+    </div>

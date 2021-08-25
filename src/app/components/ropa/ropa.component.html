@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="col-12">
+        <h1 class="text-center titulo m-1 letra">Ropas Disponibles </h1>
+        <hr>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col animated faceIn  fast" *ngFor="let ropa of ropas let i = index">
+                <div class="card ">
+                    <img [src]="ropa.img " class="card-img-top letra" [alt]="ropa.nombre">
+                    <div class="card-body">
+                        <h5 class="card-title text-center letra">{{ropa.nombre}}</h5>
+                    </div>
+                    <!--<button class=" btn btn-primary"> Comprar</button> -->
+                    <a class="btn btn-primary boton letra" [routerLink]="['/carrito',i]">comprar</a>
+                </div>
+            </div>
+        </div>
+    </div>
