@@ -10,7 +10,7 @@ export class RopaService {
     {
       nombre: "pantalon",
       precio: "300",
-      img: "assets/img/products/pantalones1.jpg",
+      img: "./assets/img/products/pantalones1.jpg",
       Detalle:  " Esta Ropa es elaborada con tela de primera",
       size:"m",
       color:"Blanco"
@@ -19,7 +19,7 @@ export class RopaService {
       
       nombre: "zapato",
       precio: "300",
-      img: "assets/img/products/zapato3.jpg",
+      img: "./assets/img/products/zapato3.jpg",
       Detalle: " Estos zapatos son elaborados con la mayor calidad ",
       size:"39",
       color:"Blanco"
@@ -27,7 +27,7 @@ export class RopaService {
     {
       nombre: "Blusa",
       precio: "300",
-      img: "assets/img/products/blusa1.jpg",
+      img: "./assets/img/products/blusa1.jpg",
       Detalle:  " Esta Ropa es elaborada con tela de primera",
       size:"m",
       color:"Blanco"
@@ -36,7 +36,7 @@ export class RopaService {
     {
       nombre: "vestido",
       precio: "300",
-      img: "assets/img/products/vestido1.jpg",
+      img: "./assets/img/products/vestido1.jpg",
       Detalle:  " Esta Ropa es elaborada con tela de primera",
       size:"m",
       color:"Blanco"
@@ -45,7 +45,7 @@ export class RopaService {
     {
       nombre: "Blusa",
       precio: "300",
-      img: "assets/img/products/blusa2.jpg",
+      img: "./assets/img/products/blusa2.jpg",
       Detalle:  " Esta Ropa es elaborada con tela de primera",
       size:"m",
       color:"Blanco"
@@ -55,7 +55,7 @@ export class RopaService {
     {
       nombre: "pantalon",
       precio: "300",
-      img: "assets/img/products/pantalones1.jpg",
+      img: "./assets/img/products/pantalones1.jpg",
       Detalle:  " Esta Ropa es elaborada con tela de primera",
       size:"m",
       color:"Blanco"
@@ -64,7 +64,7 @@ export class RopaService {
       
       nombre: "zapato",
       precio: "300",
-      img: "assets/img/products/zapato3.jpg",
+      img: "./assets/img/products/zapato3.jpg",
       Detalle:  " Estos zapatos son elaborados con la mayor calidad",
       size:"39",
       color:"Blanco"
@@ -73,7 +73,7 @@ export class RopaService {
     {
       nombre: "Blusa",
       precio: "300",
-      img: "assets/img/products/blusa1.jpg",
+      img: "./assets/img/products/blusa1.jpg",
       Detalle:  " Esta Ropa es elaborada con tela de primera",
       size:"m",
       color:"Blanco"
@@ -85,7 +85,7 @@ export class RopaService {
       
       nombre: "Blusa",
       precio: "300",
-      img: "assets/img/products/blusa1.jpg",
+      img: "./assets/img/products/blusa1.jpg",
       Detalle:" Estos zapatos son elaborados con la mayor calidad" ,
       size:"39",
       color:"Blanco"
